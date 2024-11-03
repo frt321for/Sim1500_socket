@@ -419,7 +419,7 @@ namespace pro2
 
         private void UpdateRecvFromTopic(MqttApplicationMessageReceivedEventArgs e)
         {
-            // 为什么这里显示的是自己的发的内容,我要其他客户端的啊
+            
             recvFromTopic.AppendText($"{e.ApplicationMessage.Topic}: {Encoding.UTF8.GetString(e.ApplicationMessage.Payload)}\n");
         }
         private void MqttClient_Disconnected(object sender, MQTTnet.Client.MqttClientDisconnectedEventArgs e)
